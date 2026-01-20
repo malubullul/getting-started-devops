@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repo') {
-            steps {
-                git 'https://github.com/malubullul/getting-started-devops.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t getting-started-app:latest .'
